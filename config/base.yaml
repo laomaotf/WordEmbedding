@@ -1,6 +1,8 @@
 RAW_TEXT_DIR : "data/raw/"
 SEGMENTED_TXT : "output/segmented.txt"
 STOPWORDS : "data/stopwords-master/baidu_stopwords.txt"
+MIN_WORD_LEN: 2
+MIN_WORD_FREQ: 50
 
 SKIPGRAM:
   DATASET: "output/skipgram.pkl"

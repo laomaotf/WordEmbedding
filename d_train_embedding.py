@@ -63,8 +63,9 @@ class EmbeddingLayerClass(tfks.Model):
     def __init__(self,vocab_size, embedding_dim=128, predict_only = False):
         super(EmbeddingLayerClass, self).__init__()
         self.embedding = tfks.layers.Embedding(vocab_size,embedding_dim,input_length=1, name="emb")
-        #single embedding for y
-        self.embedding_y = tfks.layers.Embedding(vocab_size, embedding_dim, input_length=1, name="emby")
+        #single embedding for y (只参与训练，不导出)
+        #self.embedding_y = tfks.layers.Embedding(vocab_size, embedding_dim, input_length=1, name="emby")
+        self.embedding_y = self.embedding
     def call(self,x, y = None, pos=True):
         x_emb = self.embedding(x)
         # if y is None:
