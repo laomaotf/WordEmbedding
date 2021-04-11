@@ -1,0 +1,9 @@
+RAW_TEXT_DIR : "data/raw/"
+SEGMENTED_TXT : "output/segmented.txt"
+STOPWORDS : "data/stopwords-master/baidu_stopwords.txt"
+
+SKIPGRAM:
+  DATASET: "output/skipgram.pkl"
+
+SOLVER:
+  WEIGHTS: ""
